@@ -1,0 +1,272 @@
+/* General Reset */
+* {
+    margin: 0; /* Menghapus margin default dari semua elemen */
+    padding: 0; /* Menghapus padding default dari semua elemen */
+    box-sizing: border-box; /* Mengatur ukuran elemen termasuk padding dan border */
+}
+
+/* Styling untuk body */
+body {
+    font-family: 'Roboto', sans-serif; /* Menentukan jenis font utama */
+    background-color: #fafafa; /* Memberikan warna latar belakang terang */
+    color: #333; /* Memberikan warna teks abu-abu gelap */
+    line-height: 1.6; /* Menambah jarak antar baris */
+}
+
+/* Styling untuk header (navbar) */
+header {
+    width: 100%; /* Membuat header memiliki lebar penuh */
+    padding: 0; /* Menghapus padding di dalam header */
+    background-color: #f7e6d4; /* Warna latar cream untuk header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus */
+    position: fixed; /* Memastikan header tetap di atas saat halaman di-scroll */
+    top: 0; /* Melekatkan header ke bagian atas */
+    z-index: 1000; /* Prioritas tinggi agar header berada di atas elemen lain */
+}
+
+.navbar {
+    width: 100%; /* Navbar menggunakan lebar penuh */
+    padding: 0 20px; /* Memberikan padding horizontal untuk spasi */
+}
+
+.navbar-brand {
+    display: flex; /* Flexbox untuk mempermudah alignment */
+    align-items: center; /* Vertikal tengah elemen di dalamnya */
+}
+
+.navbar-brand span {
+    font-size: 1.5rem; /* Ukuran font besar */
+    font-weight: bold; /* Menebalkan teks */
+    color: #007bff; /* Memberikan warna biru */
+    text-decoration: none; /* Menghapus garis bawah pada teks */
+}
+
+.navbar-nav .nav-link {
+    margin: 0 10px; /* Jarak antar link */
+    color: #555; /* Warna abu-abu untuk link */
+    font-weight: 500; /* Menambahkan ketebalan font */
+    transition: color 0.3s; /* Transisi warna saat hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Warna biru pada hover */
+}
+
+/* Styling untuk tombol utama */
+.btn-primary {
+    background-color: #007bff; /* Warna biru */
+    border: none; /* Menghapus border default */
+    border-radius: 50px; /* Membuat sudut tombol lebih bulat */
+    padding: 8px 25px; /* Memberikan padding pada tombol */
+    font-weight: 600; /* Menambahkan ketebalan font */
+    font-size: 16px; /* Ukuran font yang mudah dibaca */
+    text-transform: uppercase; /* Teks huruf besar semua */
+    letter-spacing: 1px; /* Memberi jarak antar huruf */
+    display: inline-flex; /* Menggunakan flex untuk align teks */
+    align-items: center; /* Vertikal tengah teks */
+    justify-content: center; /* Horizontal tengah teks */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+    transform: scale(1.05); /* Sedikit membesarkan tombol saat hover */
+}
+
+/* Styling untuk heading */
+h2, h3 {
+    color: #1a73e8; /* Memberikan warna biru pada heading */
+}
+
+/* Styling untuk section intro */
+.intro {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 2rem; /* Memberikan padding */
+    border-radius: 5px; /* Membuat sudut melengkung */
+    color: #333; /* Warna teks abu-abu gelap */
+}
+
+/* Styling untuk item pada bagian cerita */
+.our-story .timeline-item {
+    margin-bottom: 1.5rem; /* Jarak antar item */
+}
+
+.our-story .timeline-content {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 1rem; /* Memberikan padding di dalam konten */
+    border-radius: 5px; /* Membuat sudut konten melengkung */
+    border-left: 4px solid #1a73e8; /* Garis biru di sebelah kiri */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+/* Styling untuk nilai kami */
+.our-values .col-md-4 {
+    margin-bottom: 2rem; /* Jarak antar kolom */
+}
+
+.our-values i {
+    color: #1a73e8; /* Warna biru untuk ikon */
+}
+
+.our-values h5 {
+    color: #1a73e8; /* Warna biru untuk heading */
+}
+
+/* Styling untuk bagian 'Who We Are' */
+.who-we-are .row {
+    display: flex; /* Flexbox untuk grid */
+    align-items: center; /* Tengah secara vertikal */
+}
+
+.who-we-are .col-md-6 {
+    padding: 1rem; /* Padding untuk kolom */
+}
+
+.who-we-are img {
+    width: 100%; /* Gambar mengisi penuh kolom */
+    border-radius: 8px; /* Sudut gambar melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+/* Styling untuk bagian 'What We Do' */
+.what-we-do {
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 2rem; /* Memberikan padding */
+    background-color: #fff; /* Warna latar putih */
+    margin-top: 2rem; /* Jarak dengan elemen atas */
+    box-sizing: border-box; /* Padding termasuk dalam ukuran */
+}
+
+.what-we-do h3 {
+    color: gray; /* Warna biru untuk heading */
+    margin-bottom: 1.5rem; /* Jarak antara heading dan konten */
+    text-align: center;
+}
+
+.what-we-do .row {
+    display: flex; /* Flexbox untuk tata letak kolom */
+    justify-content: space-between; /* Spasi antar kolom */
+    gap: 2rem; /* Jarak antar kolom */
+}
+
+.what-we-do .col-md-4 {
+    flex: 1; /* Kolom menyesuaikan ruang */
+    padding: 1rem; /* Padding dalam kolom */
+    background-color: #ffffff; /* Warna latar putih */
+    border-radius: 8px; /* Sudut melengkung */
+    border: 1px solid #e0e0e0; /* Border abu-abu muda */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan ringan */
+}
+
+.what-we-do .col-md-4 h5 {
+    margin-bottom: 1rem; /* Jarak heading dengan teks */
+}
+
+.what-we-do .col-md-4 p {
+    flex-grow: 1; /* Membuat teks menempati ruang kosong */
+}
+
+.what-we-do .col-md-4 img {
+    width: 100%; /* Gambar penuh kolom */
+    border-radius: 5px; /* Sudut melengkung pada gambar */
+}
+
+/* Media query untuk perangkat kecil */
+@media (max-width: 768px) {
+    .what-we-do .row {
+        flex-direction: column; /* Kolom ditumpuk */
+        align-items: center; /* Elemen rata tengah */
+    }
+}
+
+.text-center1 {
+    color: gray; /* Warna biru untuk heading */
+    margin-bottom: 1.5rem; /* Jarak antara heading dan konten */
+    text-align: center;
+}
+
+/* Styling animasi untuk bagian 'Our Story' */
+.our-story {
+    opacity: 0; /* Awalnya elemen tidak terlihat */
+    transform: translateY(50px); /* Geser elemen ke bawah sejauh 50px */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Animasi halus pada posisi dan opacity */
+}
+
+.our-story.show {
+    opacity: 1; /* Elemen menjadi terlihat */
+    transform: translateY(0); /* Elemen kembali ke posisi awal */
+}
+
+/* Styling untuk teks di bagian 'Our Values' */
+.our-values p {
+    color: #666; /* Warna abu-abu untuk teks deskripsi */
+}
+
+/* Styling untuk list di bagian tertentu dengan ikon */
+.titik ul {
+    list-style-type: none; /* Hilangkan bullet default */
+    padding-left: 0; /* Hilangkan padding kiri */
+}
+
+.titik li {
+    padding-left: 1.2rem; /* Tambahkan padding kiri untuk memberi ruang ikon */
+    position: relative; /* Untuk menempatkan ikon di posisi tertentu */
+    margin-bottom: 0.5rem; /* Jarak antar item */
+}
+
+.titik li::before {
+    position: absolute; /* Posisi absolut agar mengikuti li */
+    left: 0; /* Letakkan ikon di paling kiri */
+    color: #1a73e8; /* Warna biru untuk ikon */
+    font-size: 1.2rem; /* Ukuran font untuk ikon */
+}
+
+/* Styling untuk logo footer */
+.footer img {
+    margin-left: 10px; /* Tambahkan jarak di kiri untuk spasi */
+    display: inline-block; /* Atur agar gambar tetap dalam satu baris */
+}
+
+/* Styling link dalam footer */
+.footer a {
+    color: white; /* Warna putih untuk link */
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+}
+
+.footer a:hover {
+    color: #ffc107; /* Warna kuning saat hover */
+}
+
+/* Styling ikon pembayaran dalam footer */
+.payment-icons {
+    display: flex; /* Gunakan flexbox untuk tata letak ikon */
+    justify-content: center; /* Ikon dirata tengah secara horizontal */
+    align-items: center; /* Ikon dirata tengah secara vertikal */
+    gap: 10px; /* Jarak antar ikon */
+    flex-wrap: wrap; /* Bungkus baris jika layar terlalu kecil */
+}
+
+.payment-icon {
+    height: 40px; /* Tinggi tetap untuk semua ikon */
+    width: auto; /* Lebar mengikuti proporsi gambar */
+    transition: transform 0.2s ease-in-out; /* Transisi untuk efek hover */
+}
+
+.payment-icon:hover {
+    transform: scale(1.1); /* Perbesar ikon sedikit saat hover */
+}
+
+/* Responsive design untuk footer */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center; /* Atur teks di tengah untuk layar kecil */
+    }
+
+    .payment-icons {
+        justify-content: center; /* Ikon tetap di tengah */
+    }
+
+    .footer img {
+        margin-left: 0; /* Hilangkan margin kiri untuk layar kecil */
+    }
+}

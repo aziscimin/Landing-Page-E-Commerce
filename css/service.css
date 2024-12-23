@@ -1,0 +1,163 @@
+/* Styling untuk heading */
+h2, h3 {
+    color: #1a73e8; /* Memberikan warna biru pada heading */
+}
+
+/* Styling untuk section intro */
+.intro {
+    background-color: #f5f5f5; /* Warna latar abu-abu terang */
+    padding: 2rem; /* Memberikan padding */
+    border-radius: 5px; /* Membuat sudut melengkung */
+    color: #333; /* Warna teks abu-abu gelap */
+}
+
+/* Styling untuk item pada bagian cerita */
+.our-story .timeline-item {
+    margin-bottom: 1.5rem; /* Jarak antar item */
+}
+
+.our-story .timeline-content {
+    background-color: #ffffff; /* Warna putih untuk konten */
+    padding: 1rem; /* Memberikan padding di dalam konten */
+    border-radius: 5px; /* Membuat sudut konten melengkung */
+    border-left: 4px solid #1a73e8; /* Garis biru di sebelah kiri */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+/* Styling untuk nilai kami */
+.our-values .col-md-4 {
+    margin-bottom: 2rem; /* Jarak antar kolom */
+}
+
+.our-values i {
+    color: #1a73e8; /* Warna biru untuk ikon */
+}
+
+.our-values h5 {
+    color: #1a73e8; /* Warna biru untuk heading */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Styling untuk bagian 'Who We Are' */
+.who-we-are .row {
+    display: flex; /* Flexbox untuk grid */
+    align-items: center; /* Tengah secara vertikal */
+}
+
+.who-we-are .col-md-6 {
+    padding: 1rem; /* Padding untuk kolom */
+}
+
+.who-we-are img {
+    width: 100%; /* Gambar mengisi penuh kolom */
+    border-radius: 8px; /* Sudut gambar melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+/* Styling untuk bagian 'What We Do' */
+.what-we-do {
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 2rem; /* Memberikan padding */
+    background-color: #fff; /* Warna latar putih */
+    margin-top: 2rem; /* Jarak dengan elemen atas */
+    box-sizing: border-box; /* Padding termasuk dalam ukuran */
+}
+
+.what-we-do h3 {
+    color: #1a73e8; /* Warna biru untuk heading */
+    margin-bottom: 1.5rem; /* Jarak antara heading dan konten */
+}
+
+.what-we-do .row {
+    display: flex; /* Flexbox untuk tata letak kolom */
+    justify-content: space-between; /* Spasi antar kolom */
+    gap: 2rem; /* Jarak antar kolom */
+}
+
+.what-we-do .col-md-4 {
+    flex: 1; /* Kolom menyesuaikan ruang */
+    padding: 1rem; /* Padding dalam kolom */
+    background-color: #ffffff; /* Warna latar putih */
+    border-radius: 8px; /* Sudut melengkung */
+    border: 1px solid #e0e0e0; /* Border abu-abu muda */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan ringan */
+}
+
+.what-we-do .col-md-4 h5 {
+    margin-bottom: 1rem; /* Jarak heading dengan teks */
+}
+
+.what-we-do .col-md-4 p {
+    flex-grow: 1; /* Membuat teks menempati ruang kosong */
+}
+
+.what-we-do .col-md-4 img {
+    width: 100%; /* Gambar penuh kolom */
+    border-radius: 5px; /* Sudut melengkung pada gambar */
+}
+
+/* Media query untuk perangkat kecil */
+@media (max-width: 768px) {
+    .what-we-do .row {
+        flex-direction: column; /* Kolom ditumpuk */
+        align-items: center; /* Elemen rata tengah */
+    }
+}
+
+
+
+
+
+
+
+
+/* Styling animasi untuk bagian 'Our Story' */
+.our-story {
+    opacity: 0; /* Awalnya elemen tidak terlihat */
+    transform: translateY(50px); /* Geser elemen ke bawah sejauh 50px */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Animasi halus pada posisi dan opacity */
+}
+
+.our-story.show {
+    opacity: 1; /* Elemen menjadi terlihat */
+    transform: translateY(0); /* Elemen kembali ke posisi awal */
+}
+
+/* Styling untuk teks di bagian 'Our Values' */
+.our-values p {
+    color: #666; /* Warna abu-abu untuk teks deskripsi */
+}
+
+/* Styling hover untuk semua link */
+a:hover {
+    color: #1a73e8; /* Warna biru pada hover */
+    text-decoration: underline; /* Tambahkan garis bawah saat hover */
+}
+
+/* Styling untuk list di bagian tertentu dengan ikon */
+.titik ul {
+    list-style-type: none; /* Hilangkan bullet default */
+    padding-left: 0; /* Hilangkan padding kiri */
+}
+
+.titik li {
+    padding-left: 1.2rem; /* Tambahkan padding kiri untuk memberi ruang ikon */
+    position: relative; /* Untuk menempatkan ikon di posisi tertentu */
+    margin-bottom: 0.5rem; /* Jarak antar item */
+}
+
+.titik li::before {
+    position: absolute; /* Posisi absolut agar mengikuti li */
+    left: 0; /* Letakkan ikon di paling kiri */
+    color: #1a73e8; /* Warna biru untuk ikon */
+    font-size: 1.2rem; /* Ukuran font untuk ikon */
+}

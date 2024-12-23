@@ -1,0 +1,494 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    
+}
+
+/* Navbar Styling */
+header {
+    width: 100%; /* Pastikan header memiliki lebar penuh */
+    padding: 0;
+    background-color: #f7e6d4; /* Warna cream */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Tetap di posisi atas */
+    top: 0; /* Tempelkan ke bagian atas */
+    z-index: 1000; /* Pastikan tetap di atas elemen lainnya */
+}
+
+.navbar {
+    width: 100%; /* Ensure navbar is full width */
+    padding: 0 20px; /* Add horizontal padding for spacing */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar-nav .nav-link {
+    margin: 0 10px;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Navbar Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px; /* More rounded corners */
+    padding: 8px 25px; /* Increase the padding to make the button slimmer and longer */
+    font-weight: 600; /* Slightly bolder text for better visibility */
+    font-size: 16px; /* Set a readable font size */
+    text-transform: uppercase; /* Capitalize the text for a modern look */
+    letter-spacing: 1px; /* Add slight spacing between letters for a cleaner appearance */
+    display: inline-flex; /* Use flexbox to align text */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly increase the size on hover for a dynamic effect */
+}
+
+.scrolling1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0056b3;
+    border-radius: 3px;
+    display: flex;
+    padding: 10px 0;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    color: white;
+    display: inline-block;
+    animation: scroll 140s linear infinite; /* Durasi 120 detik untuk kecepatan standar */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-10%); /* Mulai dari kanan */
+    }
+    100% {
+        transform: translateX(-100%); /* Berakhir di kiri */
+    }
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 600px) {
+    .scrolling-text {
+        font-size: 5vw; /* Ukuran font lebih kecil di layar kecil */
+        animation: scroll 100s linear infinite; /* Menurunkan durasi animasi agar tetap kecepatannya pas */
+    }
+}
+
+/* Responsif untuk perangkat tablet atau ukuran medium */
+@media (max-width: 1024px) {
+    .scrolling-text {
+        font-size: 3vw; /* Ukuran font sedikit lebih kecil */
+    }
+}
+
+
+.page-container {
+    max-width: 1200px;
+    margin: 50px auto; /* Memberi jarak dari navbar */
+    padding: 20px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#categoriesContainer {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.pagination-dot {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination-dot.active {
+    font-weight: bold;
+}
+
+/* Layout grid 7x3 pada layar besar (desktop) */
+@media (min-width: 1200px) {
+    .page-container {
+        padding: 40px; /* Lebih banyak padding untuk layar besar */
+    }
+
+    .header-title {
+        font-size: 30px; /* Ukuran font lebih besar */
+    }
+
+    #categoriesContainer {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+/* Layout grid 4x3 pada tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .page-container {
+        padding: 30px; /* Padding lebih kecil untuk tablet */
+    }
+
+    .header-title {
+        font-size: 26px; /* Ukuran font sedikit lebih kecil */
+    }
+
+    #categoriesContainer {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+/* Layout grid 3x2 pada layar kecil (mobile) */
+@media (max-width: 767px) {
+    .page-container {
+        padding: 15px; /* Padding lebih kecil untuk mobile */
+    }
+
+    .header-title {
+        font-size: 20px; /* Ukuran font lebih kecil */
+    }
+
+    .header-link {
+        font-size: 14px; /* Ukuran font link lebih kecil */
+    }
+
+    #categoriesContainer {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+        grid-template-rows: repeat(2, 1fr); /* 2 baris */
+    }
+
+    .category-image {
+        width: 80px; /* Ukuran gambar lebih kecil pada layar kecil */
+        height: 80px;
+    }
+}
+
+/* Layout grid 2x1 pada layar sangat kecil (misalnya ponsel dengan layar lebih kecil) */
+@media (max-width: 400px) {
+    #categoriesContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+        grid-template-rows: repeat(1, 1fr); /* 1 baris */
+    }
+
+    .category-image {
+        width: 60px; /* Ukuran gambar lebih kecil */
+        height: 60px;
+    }
+}
+
+
+
+.category-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Container untuk semua produk */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Layout 5 kolom */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Gaya untuk setiap produk */
+.product-container div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Animasi hover */
+.product-container div:hover {
+    transform: scale(1.05);
+}
+
+/* Gambar produk */
+.product-container img {
+    width: 100%;
+    height: 200px; /* Ukuran seragam */
+    object-fit: cover; /* Menyesuaikan gambar agar proporsional */
+    border-bottom: 1px solid #ddd;
+}
+
+/* Nama produk */
+.product-container p {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap; /* Nama produk hanya satu baris */
+    overflow: hidden; /* Potong teks yang terlalu panjang */
+    text-overflow: ellipsis; /* Tampilkan elipsis (...) untuk teks panjang */
+}
+
+/* Harga produk */
+.product-container .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Layout responsif */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* Layout 2 kolom */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* Layout 1 kolom */
+    }
+}
+
+  
+  
+  
+  
+
+.populer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.most-popular {
+    margin: 0;
+    font-size: 40px;
+}
+
+.view-all {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    color: #1a73e8;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+    .populer {
+        flex-direction: column;
+    }
+
+    .most-popular {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .view-all {
+        width: 100%;
+        font-size: 14px;
+        text-align: right;
+    }
+}
+
+
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination-dot.active {
+    background-color: #1a73e8;
+}
+
+@media (max-width: 768px) {
+    .categories-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .category-item {
+        margin-bottom: 20px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar kecil */
+        gap: 15px;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+/* Custom Styles */
+.category-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card-link {
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0d6efd;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.row{
+    margin-left: 100px;
+}
+/* Logo Styling */
+.footer img {
+    margin-left: 10px; /* Menambahkan jarak ke dalam agar logo tidak menyentuh tepi */
+    display: inline-block;
+}
+
+/* General Links */
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+/* Payment Icons */
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.payment-icon {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.payment-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .payment-icons {
+        justify-content: center;
+    }
+
+    .footer img {
+        margin-left: 0; /* Menghilangkan margin khusus untuk layar kecil */
+    }
+}
